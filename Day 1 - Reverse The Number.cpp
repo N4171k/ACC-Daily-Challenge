@@ -10,7 +10,7 @@ int main(){
             rev=num%10+rev*10;
             num/=10;
         }
-        std::cout << rev << std::endl;
+        cout << rev << endl;
     }
 
     return 0;
