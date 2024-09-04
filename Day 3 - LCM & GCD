@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int gcd(int A, int B) {
+    while (B != 0) {
+        int temp = B;
+        B = A % B;
+        A = temp;
+    }
+    return A;
+}
+
+int main() {
+    int A, B;
+    cin >> A >> B;
+
+    int gcdValue = gcd(A, B);
+    int lcm = abs(A * B) / gcdValue;
+
+    cout << "GCD: " << gcdValue << endl;
+    cout << "LCM: " << lcm << endl;
+
+    return 0;
+}
